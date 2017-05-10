@@ -1,0 +1,14 @@
+<h1>All Tags</h1>
+<ul>
+  <% @tags.each do |tag| %>
+  <li><a href='/tags/<%= tag.id %>'><%= tag.name %></a></li>
+  <% end %>
+</ul>
+<br>
+<h3>Create New Tag</h3>
+<form action="/tags" method="post">
+<div class="form-group">
+  <label for="t_name">Name</label>
+  <input type="text" name="t_name">
+</div>
+</form>

@@ -1,0 +1,36 @@
+<h1>Create Recipe</h1>
+<form action="/recipes/new" method="post">
+  <input type="hidden" name="r_id" value="<%=@recipe.id%>">
+  <div class="form-group">
+    <label for="r_name">Name</label>
+    <input type="text" name="r_name" value="<%=@r_name%>">
+  </div>
+  <div class="form-group">
+    <label for="instructions">Write Instructions</label>
+    <input type="text" name="instructions" value="<%=@instructions%>">
+  </div>
+  <div class="form-group">
+    <label for="rating">Rate Your Recipe</label>
+    <input type="number" name="rating" value="<%=@rating%>">
+  </div>
+  <div class="form-group">
+    <ul>
+      <% @recipe.ingredients.each do |ingredient| %>
+      <li><%= ingredient.name %></li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="form-group">
+    <label for="i_name">Ingredient</label>
+    <input type="text" name="i_name">
+  </div>
+  <div class="form-group">
+    <label for="amount">Amount</label>
+    <input type="text" name="amount">
+  </div>
+  <button type="submit" name="button" value='1'>Add Ingredient</button>
+  <div class="form-group">
+    <!-- list of Tag.all -->
+  </div>
+  <button type="submit" name="button" value='2'>Finish Recipe</button>
+</form>

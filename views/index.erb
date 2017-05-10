@@ -1,0 +1,12 @@
+<h1>All Recipes</h1>
+<ul>
+  <% @recipes.each do |recipe| %>
+  <li><%= recipe.name %></li>
+  <% end %>
+</ul>
+<br>
+<a href="/recipes/new">Add Recipe</a>
+
+<a href="/tags">See All Tags</a>
+
+<a href="/kill">Wipe Database</a>
